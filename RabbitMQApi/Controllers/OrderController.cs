@@ -7,7 +7,7 @@ namespace RabbitMQApi.Controllers
 {
     public class OrderController : ApiController
     {
-        public HttpResponseMessage Post([FromBody] Order order)
+        public HttpResponseMessage Post([FromBody] CarOrder order)
         {
             var messageBus = RabbitHutch.CreateBus("host=localhost");
 
