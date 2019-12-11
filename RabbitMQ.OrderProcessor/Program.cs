@@ -10,6 +10,7 @@ namespace RabbitMQ.OrderProcessor
         {
             var messageBus = RabbitHutch.CreateBus("host=localhost");
             messageBus.Subscribe<CarOrder>("app_subscription_id", msg=> {
+                Console.WriteLine($"{DateTime.Now.ToShortDateString()} Start processing order N{msg.OrderNumber}");
                 Console.WriteLine("Processing order: {0} -- Model: {1} -- Color: {2}", msg.CustomerEmail, msg.Model, msg.Color);
             });
         }
