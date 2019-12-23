@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQ.Messages", "Rabbit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQ.OrderProcessor", "RabbitMQ.OrderProcessor\RabbitMQ.OrderProcessor.csproj", "{4252DC09-9D3A-438A-BF7C-8570DD1DCBAC}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ConsoleApp", "ConsoleApp", "{D81C7B99-ADE2-4194-86F9-0A7B6E07D6C1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,6 +32,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3B415140-2109-4650-80F0-7ED00C006869} = {D81C7B99-ADE2-4194-86F9-0A7B6E07D6C1}
+		{85FA9CEC-3728-4760-9148-D8981D8BC2E6} = {D81C7B99-ADE2-4194-86F9-0A7B6E07D6C1}
+		{4252DC09-9D3A-438A-BF7C-8570DD1DCBAC} = {D81C7B99-ADE2-4194-86F9-0A7B6E07D6C1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1A10AE34-062F-4FA7-B113-D08AFD0D309F}
