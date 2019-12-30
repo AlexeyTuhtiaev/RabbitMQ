@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Producer"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Pulisher" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
@@ -15,6 +15,6 @@
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Button Width="100" Height="50" Click="Button_Send">Send</Button>
+        <Button Width="100" Height="50" Click="Button_Publish">Send</Button>
     </Grid>
 </Window>

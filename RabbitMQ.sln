@@ -15,6 +15,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DesktopApp", "DesktopApp", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Producer", "Producer\Producer.csproj", "{5BB84239-E792-4793-B706-404AAE1F64E1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consumer", "Consumer\Consumer.csproj", "{1273B993-F0AF-4671-AB70-786409535B59}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{5BB84239-E792-4793-B706-404AAE1F64E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5BB84239-E792-4793-B706-404AAE1F64E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5BB84239-E792-4793-B706-404AAE1F64E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1273B993-F0AF-4671-AB70-786409535B59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1273B993-F0AF-4671-AB70-786409535B59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1273B993-F0AF-4671-AB70-786409535B59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1273B993-F0AF-4671-AB70-786409535B59}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +52,7 @@ Global
 		{85FA9CEC-3728-4760-9148-D8981D8BC2E6} = {D81C7B99-ADE2-4194-86F9-0A7B6E07D6C1}
 		{4252DC09-9D3A-438A-BF7C-8570DD1DCBAC} = {D81C7B99-ADE2-4194-86F9-0A7B6E07D6C1}
 		{5BB84239-E792-4793-B706-404AAE1F64E1} = {50D59F38-BD33-400A-BD02-D85274E0DD6C}
+		{1273B993-F0AF-4671-AB70-786409535B59} = {50D59F38-BD33-400A-BD02-D85274E0DD6C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1A10AE34-062F-4FA7-B113-D08AFD0D309F}

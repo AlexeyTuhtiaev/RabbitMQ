@@ -15,28 +15,21 @@ namespace Producer
 
         }
 
-        private void Button_Send(object sender, RoutedEventArgs e)
+        private void Button_Publish(object sender, RoutedEventArgs e)
         {
             var factory = new ConnectionFactory() { HostName = "localhost" };
             using (var connection = factory.CreateConnection())
+            using (var channel = connection.CreateModel())
             {
-                using (var channel = connection.CreateModel())
-                {
-                    channel.QueueDeclare(queue: "hello",
-                                         durable: false,
-                                         exclusive: false,
-                                         autoDelete: false,
-                                         arguments: null);
+                channel.ExchangeDeclare(exchange: "logs", type: ExchangeType.Fanout);
 
-                    string message = "Hello World!";
+                var message = "Hello";
+                var body = Encoding.UTF8.GetBytes(message);
 
-                    var body = Encoding.UTF8.GetBytes(message);
-
-                    channel.BasicPublish(exchange: "",
-                                         routingKey: "hello",
-                                         basicProperties: null,
-                                         body: body);
-                }
+                channel.BasicPublish(exchange: "logs",
+                                     routingKey: "",
+                                     basicProperties: null,
+                                     body: body);
             }
         }
     }
