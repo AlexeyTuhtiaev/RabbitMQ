@@ -3,7 +3,7 @@ using RabbitMQ.Client.Events;
 using System;
 using System.Text;
 
-namespace Consumer4
+namespace Consumer4_all
 {
     class Program
     {
@@ -16,11 +16,18 @@ namespace Consumer4
                 channel.ExchangeDeclare(exchange: "direct_logs", type: ExchangeType.Direct);
 
                 var queueName = channel.QueueDeclare().QueueName;
+
+                channel.QueueBind(queue: queueName,
+                                  exchange: "direct_logs",
+                                  routingKey: "error");
+                channel.QueueBind(queue: queueName,
+                                  exchange: "direct_logs",
+                                  routingKey: "info");
                 channel.QueueBind(queue: queueName,
                                   exchange: "direct_logs",
                                   routingKey: "warning");
 
-                Console.WriteLine(" [*] Waiting for warning logs.");
+                Console.WriteLine(" [*] Waiting for all logs.");
 
                 var consumer = new EventingBasicConsumer(channel);
                 consumer.Received += (model, ea) =>
