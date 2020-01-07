@@ -24,8 +24,8 @@ namespace Consumer7_A
                 var queueName = channel.QueueDeclare().QueueName;
                 channel.QueueBind(queue: queueName,
                                   exchange: "headers_ex",
-                                  routingKey: "132etgwtyu",
-                                  headers);
+                                  routingKey: "132etgwtyu doesn't matter",
+                                  arguments: headers);
 
                 var consumer = new EventingBasicConsumer(channel);
                 consumer.Received += (model, ea) =>
