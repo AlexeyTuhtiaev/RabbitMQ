@@ -18,7 +18,7 @@ namespace Consumer6_2
                 var queueName = channel.QueueDeclare().QueueName;
                 channel.QueueBind(queue: queueName,
                                   exchange: "fanout_ex",
-                                  routingKey: "*.*.*.ecological");
+                                  routingKey: ".red");
 
                 var consumer = new EventingBasicConsumer(channel);
                 consumer.Received += (model, ea) =>
